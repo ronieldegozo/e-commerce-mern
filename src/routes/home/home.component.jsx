@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom';
 import CatContainer from '../../components/category-container/CatContainer.component';
 const  Home = () => {
 
@@ -31,7 +32,11 @@ const  Home = () => {
   ]
 
   return (
-    <CatContainer categories={categories} />
+    <div>
+      <Outlet/>
+      <CatContainer categories={categories} />
+    </div>
+
   );
 }
 
